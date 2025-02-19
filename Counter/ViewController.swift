@@ -23,7 +23,7 @@ final class ViewController: UIViewController {
         
     }
     
-    @IBAction func counterDecreaseButton(_ sender: Any) {
+    @IBAction private func counterDecreaseButton(_ sender: Any) {
         if counterValue > 0  {
             counterValue -= 1
             resultCounter.text = "\(counterValue)"
@@ -34,12 +34,12 @@ final class ViewController: UIViewController {
         }
     }
     
-    @IBAction func counterIncreaseButton(_ sender: Any) {
+    @IBAction private func counterIncreaseButton(_ sender: Any) {
         counterValue += 1
         resultCounter.text = "\(counterValue)"
         addToHistory("значение изменено на +1")
     }
-    @IBAction func zeroingCounterButton(_ sender: Any) {
+    @IBAction private func zeroingCounterButton(_ sender: Any) {
         counterValue = 0
         resultCounter.text = "\(counterValue)"
         addToHistory("значение сброшено")
